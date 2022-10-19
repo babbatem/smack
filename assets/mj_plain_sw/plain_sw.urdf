@@ -3,22 +3,22 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="Plain_Box_URDF">
+  name="plain_sw">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="0.0056233 -0.01191 0.076147"
+        xyz="0.00562325020573535 5.29414123337374E-05 0.0611148617407688"
         rpy="0 0 0" />
       <mass
-        value="0.65846" />
+        value="0.658458282652952" />
       <inertia
-        ixx="0.0016062"
-        ixy="2.4498E-06"
-        ixz="1.3433E-06"
-        iyy="0.0015646"
-        iyz="3.5399E-07"
-        izz="0.0014585" />
+        ixx="0.00160623386674434"
+        ixy="-1.34326573883209E-06"
+        ixz="2.44980864792375E-06"
+        iyy="0.00145850876442818"
+        iyz="-3.53986582960204E-07"
+        izz="0.00156462606221993" />
     </inertial>
     <visual>
       <origin
@@ -26,12 +26,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Plain_Box_URDF/meshes/base_link.STL" />
+          filename="package://plain_sw/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.79608 0.82353 0.93725 1" />
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
     <collision>
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Plain_Box_URDF/meshes/base_link.STL" />
+          filename="package://plain_sw/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -48,17 +48,17 @@
     name="top_Link">
     <inertial>
       <origin
-        xyz="0.0012643 0.097693 -0.041107"
+        xyz="0.0938685968879489 0.0492173472529402 -0.00126428952823514"
         rpy="0 0 0" />
       <mass
-        value="0.40215" />
+        value="0.40215431638902" />
       <inertia
-        ixx="0.00028852"
-        ixy="-1.0819E-06"
-        ixz="-9.1772E-08"
-        iyy="0.00057584"
-        iyz="-1.1657E-05"
-        izz="0.00071659" />
+        ixx="0.000574882647485011"
+        ixy="-3.63695361787399E-07"
+        ixz="1.08573814142762E-06"
+        iyy="0.000717543157930976"
+        iyz="-4.38840082282029E-13"
+        izz="0.000288516246686904" />
     </inertial>
     <visual>
       <origin
@@ -66,12 +66,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Plain_Box_URDF/meshes/top_Link.STL" />
+          filename="package://plain_sw/meshes/top_Link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.79608 0.82353 0.93725 1" />
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
     <collision>
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Plain_Box_URDF/meshes/top_Link.STL" />
+          filename="package://plain_sw/meshes/top_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -88,16 +88,16 @@
     name="joint_1"
     type="revolute">
     <origin
-      xyz="0 -0.0050165 0.071196"
-      rpy="2.8878 0 0" />
+      xyz="0 0.071183 0.14422"
+      rpy="1.5708 0 -1.5708" />
     <parent
       link="base_link" />
     <child
       link="top_Link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
-      lower="0"
+      lower="-2"
       upper="2"
       effort="100"
       velocity="10" />

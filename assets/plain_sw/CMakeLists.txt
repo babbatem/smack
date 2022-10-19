@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(Plain_Box_URDF)
+project(plain_sw)
 
 find_package(catkin REQUIRED)
 
