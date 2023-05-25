@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="lever_sw">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0761156327155175 -0.0796875612553784 0.0708646299506509"
+        rpy="0 0 0" />
+      <mass
+        value="0.55218458637984" />
+      <inertia
+        ixx="0.00123108242445209"
+        ixy="-9.19284755928791E-07"
+        ixz="1.3559146422426E-06"
+        iyy="0.00112080515964785"
+        iyz="9.67452718634723E-07"
+        izz="0.00120080561034475" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lever_sw/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lever_sw/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="top_link">
+    <inertial>
+      <origin
+        xyz="0.093897 -0.049338 0.054007"
+        rpy="0 0 0" />
+      <mass
+        value="0.28453" />
+      <inertia
+        ixx="0.00040671"
+        ixy="2.7102E-07"
+        ixz="-2.3777E-06"
+        iyy="0.00050448"
+        iyz="2.7383E-10"
+        izz="0.00020121" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lever_sw/meshes/top_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lever_sw/meshes/top_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="top_joint"
+    type="revolute">
+    <origin
+      xyz="-0.12893 -0.0050165 0.1474"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="top_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="slider_link">
+    <inertial>
+      <origin
+        xyz="0.01423 -0.0076054 0.0096198"
+        rpy="0 0 0" />
+      <mass
+        value="0.019903" />
+      <inertia
+        ixx="6.9109E-06"
+        ixy="-5.5361E-23"
+        ixz="5.0278E-23"
+        iyy="5.626E-06"
+        iyz="-5.4354E-07"
+        izz="6.6682E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lever_sw/meshes/slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lever_sw/meshes/slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="slider_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.14288 -0.1524 0.0889"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="slider_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.06"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lever_link">
+    <inertial>
+      <origin
+        xyz="0.036131 -0.0029899 0.0028089"
+        rpy="0 0 0" />
+      <mass
+        value="0.032636" />
+      <inertia
+        ixx="4.1354E-06"
+        ixy="2.0757E-07"
+        ixz="-4.6165E-06"
+        iyy="3.1624E-05"
+        iyz="3.9341E-23"
+        izz="3.1278E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lever_sw/meshes/lever_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lever_sw/meshes/lever_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lever_joint"
+    type="revolute">
+    <origin
+      xyz="-0.1524 -0.0762 0.1016"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lever_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="slider_sw">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.081258 0.071743 0.06813"
+        rpy="0 0 0" />
+      <mass
+        value="0.51469" />
+      <inertia
+        ixx="0.0011606"
+        ixy="-6.3506E-07"
+        ixz="-6.9204E-07"
+        iyy="0.0011117"
+        iyz="-2.8352E-07"
+        izz="0.0011617" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slider_sw/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slider_sw/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="top_link">
+    <inertial>
+      <origin
+        xyz="-0.093935 0.049344 0.058002"
+        rpy="0 0 0" />
+      <mass
+        value="0.28443" />
+      <inertia
+        ixx="0.0004067"
+        ixy="2.5778E-07"
+        ixz="2.3777E-06"
+        iyy="0.00050446"
+        iyz="3.1123E-13"
+        izz="0.0002012" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slider_sw/meshes/top_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slider_sw/meshes/top_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="top_joint"
+    type="revolute">
+    <origin
+      xyz="0.019609 0.14738 0.1474"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="top_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="slider_link">
+    <inertial>
+      <origin
+        xyz="0.014979 -0.0077014 0.010112"
+        rpy="0 0 0" />
+      <mass
+        value="0.019201" />
+      <inertia
+        ixx="6.3796E-06"
+        ixy="-9.2709E-23"
+        ixz="-7.0686E-25"
+        iyy="5.1523E-06"
+        iyz="-6.3327E-07"
+        izz="6.6094E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slider_sw/meshes/slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://slider_sw/meshes/slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="slider_joint"
+    type="prismatic">
+    <origin
+      xyz="0.009525 0 0.0889"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="slider_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.06"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
